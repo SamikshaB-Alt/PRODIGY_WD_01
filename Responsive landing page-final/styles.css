@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0a0a0a; /* Dark background for the whole page */
+  color: #e0e0e0; /* Light text color for contrast */
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #00bfae, #005c97); /* Neon blue to dark blue gradient */
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for better separation */
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #e0e0e0;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+#nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#nav-list li {
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #e0e0e0; /* Light text color */
+  padding: 15px 25px;
+  font-size: 16px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #121212; /* Dark text color for contrast */
+  background-color: #00bfae; /* Neon blue background on hover/active */
+}
+
+.content {
+  margin-top: 70px; /* Ensure content isn't covered by navbar */
+}
+
+section {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px; /* Rounded corners for sections */
+  margin: 0;
+  position: relative; /* For absolute positioning of content */
+  border: 2px solid rgba(255, 255, 255, 0.1); /* Subtle border for separation */
+}
+
+#home {
+  background: linear-gradient(to right, #00bfae, #005c97); /* Neon blue gradient */
+  border-bottom: 4px solid #00bfae; /* Distinct bottom border */
+}
+
+#about {
+  background: linear-gradient(to right, #005c97, #003d56); /* Darker blue gradient */
+  border-bottom: 4px solid #005c97; /* Distinct bottom border */
+}
+
+#services {
+  background: linear-gradient(to right, #003d56, #001f2e); /* Even darker gradient */
+  border-bottom: 4px solid #003d56; /* Distinct bottom border */
+}
+
+#contact {
+  background: linear-gradient(to right, #001f2e, #000000); /* Black gradient */
+  border-bottom: 4px solid #001f2e; /* Distinct bottom border */
+}
+
+.text-content {
+  max-width: 800px; /* Centered content width */
+  position: relative; /* Relative positioning for internal elements */
+}
+
+h1, h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for better text readability */
+  margin: 0 0 20px;
+  color: #ffffff; /* Ensure headers are readable */
+}
+
+p {
+  line-height: 1.6; /* Improved readability */
+  margin: 0 0 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 16px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e1e1e; /* Dark input background */
+  color: #e0e0e0; /* Light text color */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #00bfae; /* Neon blue */
+  border: none;
+  border-radius: 5px;
+  color: #121212; /* Dark text color */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #008d8d; /* Darker neon blue on hover */
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    background: #000; /* Solid black background for mobile */
+  }
+  
+  #nav-list {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #000; /* Solid black background for the menu */
+    padding: 20px;
+  }
+
+  #nav-list.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-link {
+    margin: 10px 0;
+  }
+}

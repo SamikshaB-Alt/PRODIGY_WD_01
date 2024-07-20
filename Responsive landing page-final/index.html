@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="navbar">
+    <div class="menu-toggle" id="menu-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul id="nav-list">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="content">
+    <section id="home">
+      <div class="text-content">
+        <h1>Welcome to Our Website</h1>
+        <p>Discover our services, learn more about us, and get in touch. We're here to provide the best solutions tailored to your needs.</p>
+        <a href="#services" class="cta-button">Explore Services</a>
+      </div>
+    </section>
+    <section id="about">
+      <div class="text-content">
+        <h2>About Us</h2>
+        <p>We are a dedicated team of professionals committed to delivering top-notch services. Our expertise spans various fields, ensuring that we can cater to diverse client needs with excellence.</p>
+        <p>Founded in 2020, we have quickly established ourselves as leaders in our industry. Our mission is to provide innovative solutions and exceptional customer service.</p>
+      </div>
+    </section>
+    <section id="services">
+      <div class="text-content">
+        <h2>Our Services</h2>
+        <ul>
+          <li><strong>Consulting:</strong> Expert advice tailored to your business needs.</li>
+          <li><strong>Design:</strong> Creative solutions to enhance your brand’s image.</li>
+          <li><strong>Development:</strong> Cutting-edge technology to build robust solutions.</li>
+          <li><strong>Support:</strong> Reliable assistance to ensure smooth operations.</li>
+        </ul>
+        <a href="#contact" class="cta-button">Get in Touch</a>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="text-content">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Whether you have a question, need support, or want to discuss a potential project, feel free to reach out.</p>
+        <form action="#" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          
+          <button type="submit" class="cta-button">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
